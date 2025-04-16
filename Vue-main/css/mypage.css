@@ -1,0 +1,97 @@
+@import url(style.css);
+
+.container {
+  padding: 2rem 1rem 6rem;
+  text-align: center;
+}
+
+.page-title {
+  margin-top: 80px;
+  color: #38c16f;
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #75CC55, #00d3a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out 0.2s both;
+  margin-bottom: 50px;
+}
+
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #6ce18e, #38c16f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0 auto 0.5rem;
+  box-shadow: 0 0 0 4px white;
+}
+
+.username {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.user-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 3rem;
+}
+
+.setting-card {
+  text-decoration: none;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  max-width: 90%;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.setting-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+
+.setting-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.setting-icon {
+  background: #e6f5e6;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+}
+
+.setting-texts {
+  text-align: left;
+}
+
+.setting-texts .label {
+  color: black;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.setting-texts .sub {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.arrow-icon {
+  stroke: #9bcf9f;
+}

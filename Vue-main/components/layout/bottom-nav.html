@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation Bar</title>
+    <link rel="stylesheet" href="../css/bottom-nav.css">
+</head>
+<body>
+    <div class="bottom-navigation">
+        <a class="nav-item" id="report-tab" href="../views/myreport.html">
+            <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path d="M18 20V10" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 20V4" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 20V14" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="nav-label">리포트</div>
+        </a>
+        
+        <a class="nav-item active" id="home-tab" href="../views/home.html">
+            <div class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <!-- 집 외곽선 -->
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#38c16f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <!-- 집 내부 문 -->
+                    <polyline points="9 22 9 12 15 12 15 22" stroke="#38c16f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                </svg>
+            </div>
+            <div class="nav-label">홈</div>
+        </a>
+        
+        <a class="nav-item" id="my-tab" href="../views/mypage.html">
+            <div class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <!-- 사람 몸통 (항상 회색) -->
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <!-- 사람 머리 (활성화 시 녹색으로 변함) -->
+                    <circle cx="12" cy="7" r="4" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+                </svg>
+            </div>
+            <div class="nav-label">MY</div>
+        </a>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.nav-item');
+      const pageTitle = document.title;
+  
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        const paths = tab.querySelectorAll('svg path, svg polyline, svg circle');
+        paths.forEach(path => path.setAttribute('stroke', '#888888'));
+        tab.querySelector('.nav-label').style.color = '#888888';
+  
+        const tabId = tab.id;
+        if (
+          (tabId === 'home-tab' && pageTitle.includes('홈')) ||
+          (tabId === 'report-tab' && pageTitle.includes('나의 리포트')) ||
+          (tabId === 'my-tab' && pageTitle.includes('마이페이지')) // 또는 마이페이지, 설정 등
+        ) {
+          tab.classList.add('active');
+          paths.forEach(path => path.setAttribute('stroke', '#38c16f'));
+          tab.querySelector('.nav-label').style.color = '#38c16f';
+        }
+      });
+    });
+  </script>
+  </html>

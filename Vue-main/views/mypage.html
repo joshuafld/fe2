@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY</title>
+  <link rel="stylesheet" href="../css/mypage.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-title">마이페이지</h2>
+    <div class="profile-circle">김</div>
+    <div class="username">김민지</div>
+    <div class="user-meta">여성 · 22세<br>mjkim0323</div>
+
+    <a class="setting-card" href="edit-speed.html">
+      <div class="setting-left"> 
+        <!-- ✅ 설정 아이콘 (SVG) -->
+        <div class="setting-icon">
+          <svg width="24" height="24" fill="none" stroke="#38c16f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .69.4 1.31 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09c.59.2 1.1.61 1.51 1.09h.09a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </div>
+        <div class="setting-texts">
+          <div class="label">보행속도 설정</div>
+          <div class="sub">현재 1.23m/s - 1.45m/s</div>
+        </div>
+      </div>
+      <!-- ✅ 오른쪽 화살표 아이콘 (SVG) -->
+      <svg class="arrow-icon" width="20" height="20" fill="none" stroke-width="2.5" viewBox="0 0 24 24">
+        <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- ✅ 바텀 네비게이션 삽입 위치 -->
+  <div id="footer"></div>
+  <script src="../js/include.js"></script>
+</body>
+</html>

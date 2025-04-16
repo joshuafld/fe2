@@ -1,0 +1,72 @@
+@import url("/css/style.css");
+
+.card {
+    width: 100%; /* 너비 축소 */
+    height: 250px;
+    max-width: 400px; /* 최대 너비 축소 */
+    background: linear-gradient(to left, #E8F9DB 0%, #F5FFED 100%);
+    border-radius: 16px;
+    padding: 20px 24px; /* 좌우 패딩 증가 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px; /* 모바일에 맞게 폰트 크기 축소 */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.divider {
+    border-top: 1px solid #C8F0AF;
+    margin: 12px 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+    color: #444;
+    padding: 0 16px; /* 좌우 여백 증가 */
+}
+
+.label {
+    font-size: 16px; /* 모바일에 맞게 폰트 크기 축소 */
+    color: #666;
+}
+
+.value {
+    font-size: 16px; /* 모바일에 맞게 폰트 크기 축소 */
+    font-weight: bold;
+    color: #333;
+    margin-left: auto; /* 오른쪽 정렬 */
+}
+
+.close {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+}
+
+/* 모바일 특화 미디어 쿼리 */
+@media (max-width: 480px) {
+    .card {
+        width: 95%;
+        padding: 16px;
+    }
+    
+    .title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    
+    .info-row {
+        margin: 14px 0;
+    }
+}
