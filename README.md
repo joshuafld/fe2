@@ -1,4 +1,3 @@
-# Vue
 
 - pages
   - [온보딩](https://capstonedesign-hufs.github.io/fe2/views/onboarding.html)
