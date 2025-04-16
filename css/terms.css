@@ -1,0 +1,99 @@
+@import url("../css/style.css");
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: static;
+  background: linear-gradient(165deg, #f5ffed 0%, #e8f9db 100%);
+}
+
+/* =======================
+   Layout
+======================= */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-bottom: 60px; /* 콘텐츠 하단 여백 확보 */
+}
+
+/* =======================
+   Typography
+======================= */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  color: #333;
+  background: linear-gradient(90deg, #75cc55, #00d3a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+h1 button {
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  color: #198754;
+  transition: color 0.2s ease;
+}
+
+h1 button:hover {
+  color: #0f5132;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #666}
+
+/* =======================
+   Components
+======================= */
+.back-btn:hover {
+  cursor: pointer;
+}
+
+.terms-box {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border: 2px solid #b2eab3;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #343a40;
+}
+
+.terms-box p {
+  margin-bottom: 1rem;
+}
+
+.terms-box ul {
+  padding-left: 1.2rem;
+  color: #212529;
+}
+
+.terms-box li {
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+/* =======================
+   Animations
+======================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

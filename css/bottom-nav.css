@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+}
+
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* 높이 증가 */
+    background-color: #ffffff;
+    border-top: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px; /* 홈 인디케이터를 위한 여백 추가 */
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 100%;
+    cursor: pointer;
+    padding-top: 8px; /* 상단 여백 추가 */
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px; /* 아이콘과 텍스트 사이 여백 증가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-label {
+    font-size: 12px;
+    color: #888888;
+}
+
+.nav-item.active .nav-label {
+    color: #38c16f;
+    font-weight: 500;
+}

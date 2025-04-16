@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../css/signin.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Toggle password visibility
+      const eyeIcon = document.querySelector('.eye-icon');
+      eyeIcon.addEventListener('click', function() {
+        const input = document.querySelector('.password-field .input-field');
+        if (input.type === 'password') {
+          input.type = 'text';
+          this.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>`;
+        } else {
+          input.type = 'password';
+          this.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>`;
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="content">
+    <div class="brand-area">
+      <div class="logo-container">
+        <div class="logo-bg"></div>
+        <img class="logo" src="../assets/images/ttikkaT.png" alt="Alien Character">
+      </div>
+      <h1 class="brand-title">로그인</h1>
+    </div>
+    
+    <div class="form-area">
+      <input type="text" class="input-field" placeholder="아이디">
+      <div class="password-field">
+        <input type="password" class="input-field" placeholder="비밀번호">
+        <div class="eye-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <button class="btn">로그인</button>
+    <p class="signup-text">아직 회원이 아니신가요? <a href="signup.html" class="signup-link">회원가입</a></p>
+    
+    <svg class="wave-decoration" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.75,0,116.21,29.87,181.06,54.47,229.93,74.39,280.09,70.22,321.39,56.44Z" fill="#c6f264"></path>
+    </svg>
+  </div>
+</body>
+</html>

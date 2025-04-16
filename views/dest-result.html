@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>김밥천국 검색 결과</title>
+  <link rel="stylesheet" href="../css/dest-result.css">
+</head>
+<body>
+  <div class="container">
+    <div class="search-header">
+      <a href="home.html" class="back-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </a>
+        <!-- 모달창 (기본 숨김) -->
+<div id="customModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2>목적지 선택</h2>
+    <p>이곳으로 안내할까요?</p>
+    <button id="modalYesBtn" class="modal-btn">예</button>
+    <button id="modalCloseBtn" class="modal-btn">닫기</button>
+  </div>
+</div>
+
+      <div class="search-text">김밥천국</div>
+    </div>
+    
+    <div class="results-header">
+      <h1 class="results-title">김밥천국</h1>
+      <p class="results-count">4개의 검색 결과</p>
+    </div>
+    
+    <div class="results-list">
+      <div class="result-item">
+        <div class="result-info">
+          <h3 class="result-name">김밥천국 회기점</h3>
+          <div class="result-details">
+            <span class="result-distance">690m</span>
+            <span class="result-address">서울 동대문구 망우로 38</span>
+          </div>
+        </div>
+        <div class="arrow-button" role="button" tabindex="0" aria-label="상세 정보 보기">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="result-item">
+        <div class="result-info">
+          <h3 class="result-name">김밥천국 경희대점</h3>
+          <div class="result-details">
+            <span class="result-distance">775m</span>
+            <span class="result-address">서울 동대문구 경희대로3길 38</span>
+          </div>
+        </div>
+        <div class="arrow-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="result-item">
+        <div class="result-info">
+          <h3 class="result-name">김밥천국</h3>
+          <div class="result-details">
+            <span class="result-distance">1.2km</span>
+            <span class="result-address">서울 동대문구 왕산로 263</span>
+          </div>
+        </div>
+        <div class="arrow-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="result-item">
+        <div class="result-info">
+          <h3 class="result-name">김밥천국 동부시장점</h3>
+          <div class="result-details">
+            <span class="result-distance">1.8km</span>
+            <span class="result-address">서울 동대문구 전농로 190</span>
+          </div>
+        </div>
+        <div class="arrow-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add event listener to back button
+    
+    
+    // Add click event handlers to arrow buttons
+    document.addEventListener('DOMContentLoaded', function() {
+  const arrowButtons = document.querySelectorAll('.arrow-button');
+  const modal = document.getElementById('customModal');
+  const closeBtn = document.getElementById('modalCloseBtn');
+
+  arrowButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      modal.classList.remove('hidden');
+    });
+
+    // 키보드 접근성
+    button.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        button.click();
+      }
+    });
+  });
+
+  // 예 버튼
+  const yesBtn = document.getElementById('modalYesBtn');
+  yesBtn.addEventListener('click', function() {
+    modal.classList.add('hidden');
+    // 홈으로 이동하기
+    window.location.href = 'home.html';
+  });
+
+  // 닫기 버튼
+  closeBtn.addEventListener('click', function() {
+    modal.classList.add('hidden');
+  });
+
+  // 바깥 클릭 시 닫기
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
